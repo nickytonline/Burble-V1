@@ -1,35 +1,35 @@
 .movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  margin-bottom: 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+	margin-bottom: 3rem;
 }
 @media only screen and (max-width: 1024px) {
-  .movie-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
+	.movie-grid {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	}
 }
 .movie-grid__loadmore {
-  text-align: center;
+	text-align: center;
 }
 
 .movie-search {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
+	position: relative;
+	width: 100%;
+	max-width: 500px;
 }
 .movie-search input {
-  width: 100%;
-  padding-right: 8rem;
+	width: 100%;
+	padding-right: 8rem;
 }
 .movie-search button {
-  position: absolute;
-  right: 0;
-  top: 2px;
+	position: absolute;
+	right: 0;
+	top: 2px;
 }
 @media only screen and (max-width: 600px) {
-  .movie-search button {
-    right: 1px;
-    top: 1px;
-  }
-}/*# sourceMappingURL=movie-grid.css.map */
+	.movie-search button {
+		right: 1px;
+		top: 1px;
+	}
+} /*# sourceMappingURL=movie-grid.css.map */

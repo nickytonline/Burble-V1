@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export const initialThemeState = {
-  theme: "light",
-  setTheme: () => null  
+	theme: "light",
+	setTheme: () => null,
 };
 
 const ThemeContext = React.createContext(initialThemeState);

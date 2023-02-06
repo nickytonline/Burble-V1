@@ -1,56 +1,54 @@
-@use "./scss/" as * ;
+@use "./scss/" as *;
 
 @use "../src/scss/_theme.scss";
 @use "../src/scss/variables.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
 
- * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
- }
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
 
 html {
-  font-size: 100%;
+	font-size: 100%;
 
-  @include tablet{
-    font-size: 80%;
-  }
+	@include tablet {
+		font-size: 80%;
+	}
 
-  @include mobile{
-    font-size: 60%;
-  }
+	@include mobile {
+		font-size: 60%;
+	}
 }
 
 body {
-  font-family: $font-family;
-  font-weight: 400;
-  line-height: 1.5;
+	font-family: $font-family;
+	font-weight: 400;
+	line-height: 1.5;
 
-  .theme--light{
-    background-color: $body-bg;
-    color: $txt-color;
-  }
+	.theme--light {
+		background-color: $body-bg;
+		color: $txt-color;
+	}
 
-  .theme--dark{
-    background-color:$body-bg-dark;
-    color: $txt-color-dark;
-  }
-  
-  // TODO: Still needs work
-  // @mixin themed(){
-  //   background: t('background-color');
-  //   color: t('color');
-  // }
+	.theme--dark {
+		background-color: $body-bg-dark;
+		color: $txt-color-dark;
+	}
 
-  @include mobile {
-    margin-bottom: 3rem;
-  }
+	// TODO: Still needs work
+	// @mixin themed(){
+	//   background: t('background-color');
+	//   color: t('color');
+	// }
+
+	@include mobile {
+		margin-bottom: 3rem;
+	}
 }
-
-
 
 // .dark{
 //   background-color: $body-bg-dark;
@@ -63,55 +61,56 @@ body {
 // }
 
 a {
-  text-decoration: none;
-  color: unset;
+	text-decoration: none;
+	color: unset;
 }
 
-@media(hover:hover){
-  a:hover{
-    color: $main-color;
-  }
+@media (hover: hover) {
+	a:hover {
+		color: $main-color;
+	}
 }
 
-button, input {
-  outline: 0;
+button,
+input {
+	outline: 0;
 }
 
-ul{
-  list-style-type: none;
+ul {
+	list-style-type: none;
 }
 
-img{
-  max-width: 100%;
+img {
+	max-width: 100%;
 }
 
-iframe{
-  border: 0;
+iframe {
+	border: 0;
 }
 
-.container{
-  max-width: 1660px;
-  margin: auto;
+.container {
+	max-width: 1660px;
+	margin: auto;
 }
 
 .mb-3 {
-  margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 .mb-2 {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
-.section{
-  padding: 0 2rem;
+.section {
+	padding: 0 2rem;
 }
 
-.section__header{
-  @include flex(center, space-between);
+.section__header {
+	@include flex(center, space-between);
 }
 
-//TODO: 
-.li.themeSetter.select.option{
-  font-weight: 700;
-  font-size: 1.5rem;
+//TODO:
+.li.themeSetter.select.option {
+	font-weight: 700;
+	font-size: 1.5rem;
 }

@@ -1,20 +1,20 @@
-import React, { useState} from 'react';
+import React, {useState} from "react";
 
-const ToggleBtn = ({label, toggled, onClick}) => {
-const [isToggled, toggle] = useState(toggled);
+function ToggleBtn({label, toggled, onClick}) {
+	const [isToggled, toggle] = useState(toggled),
+		callback = () => {
+			toggle(!isToggled);
+			onClick(!isToggled);
+		};
 
-  const callback = () => {
-    toggle(!isToggled)
-    onClick(!isToggled)
-  }
+	return (
+		<label>
+			<input defaultChecked={isToggled} onClick={callback} type="checkbox" />
 
-   return( 
-       <label>
-       <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
-        <span/>
-        <strong>{label}</strong>
-       </label>
-   )
+			<span />
+
+			<strong>{label}</strong>
+		</label>
+	);
 }
-export default ToggleBtn; 
-
+export default ToggleBtn;

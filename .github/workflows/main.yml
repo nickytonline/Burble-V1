@@ -1,3 +1,25 @@
-# Create a github action that runs via PR & another action to run linting.  
+# Create a github action that runs via PR & another action to run linting.
 # This action will run the tests and linting.
 # If the tests and linting pass, it will deploy the site to the gh-pages branch.
+
+name: Cypress Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.0.7 # use the explicit version number
+        with:
+          browser: chrome
+          build: npm run build
+          start: npm start
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CI: true

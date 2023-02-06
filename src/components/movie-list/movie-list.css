@@ -1,13 +1,13 @@
 .movie-list .swiper-slide {
-  width: 15%;
+	width: 15%;
 }
 @media only screen and (max-width: 1024px) {
-  .movie-list .swiper-slide {
-    width: 30%;
-  }
+	.movie-list .swiper-slide {
+		width: 30%;
+	}
 }
 @media only screen and (max-width: 600px) {
-  .movie-list .swiper-slide {
-    width: 40%;
-  }
-}/*# sourceMappingURL=movie-list.css.map */
+	.movie-list .swiper-slide {
+		width: 40%;
+	}
+} /*# sourceMappingURL=movie-list.css.map */

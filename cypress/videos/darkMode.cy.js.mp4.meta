@@ -1,6 +1,0 @@
-;FFMETADATA1
-[CHAPTER]
-TIMEBASE=1/1000
-START=2312
-END=21293
-title=Dark mode toggle toggles the dark mode and calls the onClick prop
